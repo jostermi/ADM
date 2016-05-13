@@ -1,44 +1,5 @@
 {
-  "policies": [
-    {
-      "src_name": "Proxy",
-      "dst_name": "Collectors",
-      "whitelist": [
-        {
-          "port": [
-            443,
-            443
-          ],
-          "proto": 6,
-          "action": "ALLOW"
-        },
-        {
-          "port": [
-            5600,
-            5600
-          ],
-          "proto": 6,
-          "action": "ALLOW"
-        }
-      ]
-    },
   "clusters": [
-    {
-      "name": "app",
-      "route_tag": {
-        "subnet_mask": "1.2.3.128/26",
-        "name": "Application"
-      },
-      "labels": [
-
-      ],
-      "nodes": [
-        {
-          "ip": "1.2.3.177",
-          "name": "app2"
-        }
-      ]
-    },
     {
       "name": "Collectors",
       "route_tag": {
@@ -86,57 +47,6 @@
           "name": "1.2.2.18"
         }
       ]
-    },
-    {
-      "name": "DB",
-      "approved": true,
-      "route_tag": {
-        "subnet_mask": "1.2.3.128/26",
-        "name": "Application"
-      },
-      "labels": [
-
-      ],
-      "nodes": [
-        {
-          "ip": "1.2.3.178",
-          "name": "db"
-        }
-      ]
-    },
-    {
-      "name": "JumpHost",
-      "approved": true,
-      "route_tag": {
-        "subnet_mask": "1.2.3.142/32",
-        "name": "jumphost"
-      },
-      "labels": [
-
-      ],
-      "nodes": [
-        {
-          "ip": "1.2.3.142",
-          "name": "1.2.3.142"
-        }
-      ]
-    },
-    {
-      "name": "web",
-      "approved": true,
-      "route_tag": {
-        "subnet_mask": "1.2.3.128/26",
-        "name": "Application"
-      },
-      "labels": [
-
-      ],
-      "nodes": [
-        {
-          "ip": "1.2.3.176",
-          "name": "web2"
-        }
-      ]
     }
-  ]
+    ]
 }
